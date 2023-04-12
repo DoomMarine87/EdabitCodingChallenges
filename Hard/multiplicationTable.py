@@ -17,3 +17,13 @@ Examples
 multiplication_table(1) ➞ [[1]]
 
 multiplication_table(3) ➞ [[1, 2, 3], [2, 4, 6], [3, 6, 9]]"""
+ 
+def multiplication_table(n):
+    return[[(j+1)*(i+1) for j in range(n)] for i in range(n)]
+
+print(multiplication_table(1))
+print(multiplication_table(3))
+print(multiplication_table(5))
+
+"""def multiplication_table(n):
+	return [[i*j for j in range(1,n+1)] for i in range(1, n+1)]"""
