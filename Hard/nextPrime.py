@@ -11,6 +11,8 @@ next_prime(11) ➞ 11
 def next_prime(num):
     flag = False
     for i in range(num, num + num // 2 + 1):
+        if i == 1:
+            return 2
         if i <= 3:
             return i
         if not i%2 or not i%3:
