@@ -16,3 +16,17 @@ Notes
     There will not be an empty string or an empty list.
     (Optional) Try solving this challenge in a single-line lambda function.
     A more advanced version of this challenge can be found here."""
+
+def char_at_pos(r, s):
+    return r[1::2] if s == "even" else r[::2]
+
+print(char_at_pos([2, 4, 6, 8, 10], "even")) #  ➞ [4, 8]
+# 4 & 8 occupy the 2nd & 4th positions
+print(char_at_pos("EDABIT", "odd")) # ➞ "EAI"
+# "E", "A" and "I" occupy the 1st, 3rd and 5th positions
+print(char_at_pos(["A", "R", "B", "I", "T", "R", "A", "R", "I", "L", "Y"], "odd")) # ➞ ["A", "B", "T", "A", "I", "Y"]
+
+"""def char_at_pos(r, s):
+    return r[s=='even'::2]"""
+
+"""char_at_pos = lambda r, s: r[(s=='even')::2]"""
