@@ -39,3 +39,5 @@ Notes
     Don't forget to substitute the tiles with special names.
     You can return the tiles in any order."""
 
+def gen_tiles():
+
