@@ -16,10 +16,23 @@ rate = {
 
 time(rate, people, walls) ➞ 22"""
 
-def time(dct, people, walls):
-    return (people + walls) + (dct["minutes"] - (dct["people"] + dct["walls"]))
+def time(rate, people, walls):
+    r = rate["minutes"] / rate["walls"] * rate["people"]
+    return (r * walls) / people
 
-print(time({
-    "people": 10,
-    "walls":10,
-    "minutes":22}, 14, 14))
+rate1 = {
+	'people': 4,
+	 'walls': 9,
+	 'minutes': 63 
+}
+rate2 = {
+  'people': 10,
+  'walls': 10,
+  'minutes': 22
+}
+
+print(time(rate1, 7, 4)) #, 16)
+print(time(rate2, 10, 10)) #, 22)
+
+"""def time(dct, people, walls):
+  return (dct['minutes'] * dct['people'] * walls) // (dct['walls'] * people)"""
