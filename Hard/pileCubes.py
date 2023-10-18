@@ -21,9 +21,24 @@ Notes
 N/A"""
 
 def pile_of_cubes(m):
-    return m * (m + 1) / 2
+    t = 0
+    n = 0
+
+    while t < m:
+        n += 1
+        t += n ** 3
+    
+    return n if t == m else None
 
 print(pile_of_cubes(1071225)) # ➞ 45
 print(pile_of_cubes(4183059834009)) # ➞ 2022
 print(pile_of_cubes(16)) # ➞ None
 print(pile_of_cubes(100))
+
+
+# def pile_of_cubes(m):
+#     n = 0
+#     while (m > 0):
+#         n += 1
+#         m -= n**3
+#     return n if m == 0 else None
